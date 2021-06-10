@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #D4EDDF;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #EAF6EF;
+    height: 40rem;
+    padding: 2rem;
+    box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    align-items: center;
+}
+
+
+input {
+    background: #28A761;
+    width: 25rem;
+    padding: 1.2rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+input:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+button {
+    background: #28A761;
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#textoalt, #textopeso {
+    font-size: 1.3rem;
+}
+
+#icon-alt, #icon-bala {
+    width: 28px;
+    height: 23px;
+    position: absolute;
+    margin-left: 22rem;
+    margin-top: 1.5rem;
+}
+
+#icon-calc {
+    width: 28px;
+    height: 23px;
+    position: absolute;
+    margin-left: 12rem;
+    margin-bottom: 10rem;
+ }
+
+.height, .weight, .button-section{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: center;
+}
+
+.height label, .weight label {
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}
+
+
+::-webkit-input-placeholder {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+ }
+
+
+
+.imagem-calc img {
+    padding-right: 10rem;
+}
+
+/* Modal */
+
+.modal {
+    visibility: hidden; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  
+.modal-content {
+    background-color: #fefefe;
+    padding: 2rem;
+    border: 1px solid #888;
+    border-radius: 2rem;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 2rem;
+    color: #04110A;
+  }
+
+.modal-content span {
+    margin-top: 5rem;
+    font-size: 0.8rem;
+}
+
+
+#bonecoCalc {
+    cursor: pointer;
+    height: 25%;
+}
+
+
+#resultadoImc  {
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+/* Media Queries*/
+
+@media (max-width: 2560px) {
+    .modal-content {
+        width: 25%;
+        height: 45%;
+    }
+}
+
+@media (max-width: 1920px) {
+    .modal-content {
+        width: 25%;
+        height: 45%;
+        font-size: 1.2rem;
+    }
+
+    #bonecoCalc {
+        height: 6rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 1338px){
+    form {
+        height: 30rem;
+        width: 20rem;
+    }
+
+    button {
+        padding:1rem;
+        font-size: 0.7rem;
+        width: 10rem;
+    }
+    
+    input {
+        width: 15rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    ::-webkit-input-placeholder {
+        font-size: 0.9rem;
+     }
+     	
+    #icon-calc {
+        margin-left: 7.5rem;
+        width: 22px;
+        height: 17px;
+    }
+
+    #icon-alt, #icon-bala {
+        width: 22px;
+        height: 17px;
+        margin-left: 12.7rem;
+        margin-top: 1.2rem;
+    }
+
+    #icon-bala {
+        margin-top: 1.3rem;
+    }
+
+    .imagem-calc img {
+        height: 20rem;
+    }
+
+    #textoalt, #textopeso {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 35%;
+        height: 50%;
+        font-size: 1.2rem;
+        text-align: center;
+
+    }
+
+}
+
+@media (max-width: 930px){
+
+    body {
+        flex-direction: column;
+    }
+
+    .imagem-calc img {
+        height: 13rem;
+        padding: 1rem;
+        
+    }
+
+    .modal-content {
+        width: 45%;
+        height: 50%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+   
+}
+
+@media (max-width: 770px) {
+    .modal-content {
+        width: 45%;
+        height: 45%;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 740px) {
+    .modal-content {
+        width: 45%;
+        height: 45%;
+        font-size: 1.2rem;
+    }
+
+    
+}
+
+@media (max-width: 700px) {
+    .modal-content{
+        height: 50%;
+        width: 50%;
+
+    }
+}
+
+@media (max-width: 625px) {
+    .modal-content{
+        height: 40%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 340px){
+
+    body {
+        flex-direction: column;
+    }
+
+    form {
+        width: 15rem;
+        height: 25rem;
+    }
+
+
+
+    .imagem-calc img {
+        height: 10rem;
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.7rem;
+        font-size: 0.7rem;
+        width: 8.5rem;
+    }
+    
+    input {
+        width: 12rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    ::-webkit-input-placeholder {
+        font-size: 0.7rem;
+     }
+
+
+    #icon-calc {
+        margin-left: 6.5rem;
+        width: 20px;
+        height: 15px;
+    }
+
+    #icon-alt, #icon-bala {
+        width: 22px;
+        height: 17px;
+        margin-left: 10rem;
+        margin-top: 1.2rem;
+    }
+
+
+    #textoalt, #textopeso {
+        font-size: 0.9rem;
+    
+   
+}
+
+    .modal-content{
+        height: 40%;
+        width: 70%;
+    }
+}
+
+
+
+
+
