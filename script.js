@@ -38,12 +38,10 @@ function abrir(){
 }
 
 function fechar() {
-    if (modal) {
         modal.style.visibility = 'hidden';
-    } else {
-        console.log('cu')
-    }
-    
 }
 
+modal.addEventListener('click', function(e) {
+    if (e.target == this) fechar();
+  });
 
